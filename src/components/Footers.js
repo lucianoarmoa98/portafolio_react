@@ -28,7 +28,7 @@ const FootersMobile = () => {
             backgroundColor: '#f2f7fb',
         }}>
             <Typography variant="caption" display="block" gutterBottom align="center">
-                © 2024 Luciano Armoa. Todos los derechos reservados.
+                © 2024 Incentiva Groups. Todos los derechos reservados.
             </Typography>
         </footer>
     );
@@ -78,7 +78,7 @@ const FootersWeb = () => {
 
 
                 <Typography variant="caption" display="block" gutterBottom>
-                    © 2024 Luciano Armoa. Todos los derechos reservados.
+                    © 2024 Incentiva Groups. Todos los derechos reservados.
                 </Typography>
             </div>
 
