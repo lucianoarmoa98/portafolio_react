@@ -4,7 +4,13 @@ import HeaderCustom from "../../components/HeaderCustom";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import SkeletonLoading from "../../components/SkeletonLoading";
 import { BackdropStyle } from "../../styles/styles";
-import { DatasKills, MessageDev } from "../../constantes/constantes";
+import { DatasKills, ExperienciaLaboral, MessageDev } from "../../constantes/constantes";
+import Lottie from 'react-lottie';
+import animationDevelop from "../../assets/lotties/developProgramming.json";
+import '../../styles/AppCss.css'
+import HabilidadesCustom from "../../components/HabilidadesCustom";
+import ExperienciasCustom from "../../components/ExperienciasCustom";
+import SaludoBienvenida from "../../components/SaludoBienvenida";
 
 
 
@@ -57,83 +63,13 @@ function DashboardHome() {
 
     return (
         <HeaderCustom>
-            <Container sx={{
-                marginTop: 10,
-                // marginBottom: 20
-            }}>
-                <Typography variant="h3" style={{ textAlign: 'center' }}>
-                    Hola, soy Luciano Armoa
-                </Typography>
+            <Container sx={{marginBottom: 10}}>
+                <SaludoBienvenida />
 
-                <Typography variant="body1" style={{ textAlign: 'center', marginTop: 20, marginBottom: 20 }}>
-                    {MessageDev}
-                </Typography>
+                <ExperienciasCustom data={ExperienciaLaboral} mobile={mobile} />
 
-
-                <Typography variant="h5" style={{ textAlign: 'center' }}>
-                    Mis habilidades
-                </Typography>
-
-                {mobile ?
-                    <Box sx={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        alignContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        {
-                            DatasKills.map((item, index) => {
-                                return (
-                                    <Box key={index} sx={{
-                                        padding: 2,
-                                        marginBottom: 5,
-                                        transition: 'transform 0.3s',
-                                        '&:hover': {
-                                            transform: 'scale(1.1)'
-                                        }
-
-                                    }}>
-                                        <img src={item.image} alt={item.name} style={{ ...  (mobileStyle), pointerEvents: 'none' }} draggable="false" />
-                                    </Box>
-                                )
-                            })
-                        }
-                    </Box>
-
-                    :
-                    <Box sx={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-around',
-                        marginTop: 5,
-                    }}>
-
-                        {
-                            DatasKills.map((item, index) => {
-                                return (
-                                    <Box key={index} sx={{
-                                        padding: 2,
-                                        transition: 'transform 0.3s', // Añadir transición solo para la propiedad transform
-                                        '&:hover': {
-                                            transform: 'scale(1.1)' // Aumentar el tamaño en un 10% al pasar el cursor
-                                        }
-                                    }}>
-                                        <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />
-                                    </Box>
-                                )
-                            })
-                        }
-                    </Box>
-                }
-
+                <HabilidadesCustom data={DatasKills} mobile={mobile} />
             </Container>
-
-            {/* <Categorias /> */}
-
-            <BackdropStyle open={cargando}>
-                <CircularProgress color="inherit" />
-            </BackdropStyle>
         </HeaderCustom>
     );
 }

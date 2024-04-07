@@ -18,7 +18,7 @@ function RutesScreen() {
         </Route> */}
 
         {/* <Route element={<ProtectedRoutes />}> */}
-        <Route path="/" element={<DashboardHome />} />
+        <Route path="/portafolio_react" element={<DashboardHome />} />
         {/* <Route path="/bienvenido" element={<InicioPage />} />
         <Route path="/incentiva-ecommerce-web/hombres" element={<DashboardHombres />} />
         <Route path="/incentiva-ecommerce-web/hombres/:detalles/:id" element={<CardDetails />} />

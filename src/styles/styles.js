@@ -1,7 +1,9 @@
-import { Backdrop, TextField, styled } from "@mui/material";
+import { Backdrop, TextField, Typography, styled } from "@mui/material";
+// import fontTitle from '../../src/assets/fonts/Poppins-Regular.ttf';
 import { brown } from "@mui/material/colors";
 
 export const COLOR_BACKGROUND_VERDER_AGUA = '#48c590';
+export const COLOR_BACKGROUND_BLANCO = "#ffffff";
 export const COLOR_BACKGROUND_VERDE_CLARO = "#e2f7ed";
 export const COLOR_BACKGROUND_AZUL_CLARO = "#4962c7";
 export const COLOR_BACKGROUND_GRIS = "#ebeef1";
@@ -20,6 +22,8 @@ let altoPantalla = window.innerHeight;
 //         justifyContent: 'center',
 //     },
 // }));
+
+
 export const DivnotPageStyles = styled('div')(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
@@ -53,53 +57,7 @@ export const BackdropStyle = styled(Backdrop)(({ theme }) => ({
     color: '#fff',
 }));
 
-//--------------------------------------estilo de login login.js
-
-// export const useStylesLogin = makeStyles(theme => ({
-//     centrarDiv: {
-//         // height: '100vh',
-//         height: altoPantalla,
-//         display: 'flex',
-//         flexDirection: 'column',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-//     paper: {
-//         padding: theme.spacing(3),
-//         borderRadius: 10,
-//     },
-//     imagFondoLogin: {
-//         backgroundColor: '#f2f9f9'
-//     },
-//     avatar: {
-//         margin: theme.spacing(1),
-//         backgroundColor: theme.palette.secondary.main
-//     },
-//     form: {
-//         width: "100%",
-//         // marginTop: theme.spacing(1)
-//     },
-//     submit: {
-//         // margin: theme.spacing(3, 0, 2),
-//         background: brown[600],
-//         color: 'white',
-//     },
-//     backdrop: {
-//         zIndex: theme.zIndex.drawer + 1,
-//         color: '#fff',
-//     },
-//     buttonSpacing: {
-//         marginTop: theme.spacing(2),
-//         // display: 'grid',
-//         // gap: '10px',
-//     },
-//     buttonCrearCuenta: {
-//         background: COLOR_BACKGROUND_VERDER_AGUA,
-//         color: 'white',
-//     }
-// }));
-
-//------------------------------------------------Barra de navegacion
+//-----------------------------------------estilo de Drawer
 export const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -108,36 +66,3 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
 }));
-
-
-//-----------------------------------------estilo dashboar componente AppBarra.js
-// export const useStylesAppBarra = makeStyles((theme) => ({
-//     backdrop: {
-//         zIndex: theme.zIndex.drawer + 1,
-//         color: '#fff',
-//     },
-//     colorApp: {
-//         backgroundColor: '#333'
-//     },
-//     colorDrawer: {
-//         background: '#f7f7f7',
-//     },
-//     link: {
-//         color: 'white',
-//         textDecoration: 'none',
-//     },
-//     contentItem: {
-//         justifyContent: 'center'
-//     },
-//     content: {
-//         flexGrow: 1,
-//         // backgroundColor: theme.palette.background.default,
-//         padding: theme.spacing(3),
-//     },
-//     toolbar: theme.mixins.toolbar,
-//     drawerHeader: {
-//         //obtener el alto del toolbar, para que el contenido no se vea abajo del toolbar
-//         ...theme.mixins.toolbar,
-
-//     }
-// }));

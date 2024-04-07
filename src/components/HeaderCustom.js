@@ -203,21 +203,24 @@ function HeaderCustom({ children, id }) {
                                 width: '100%',
 
                             }}>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                                     <IconButton
                                         color="inherit"
                                         aria-label="open drawer"
-                                        onClick={handleDrawerOpen}
+                                        // onClick={handleDrawerOpen}
                                         edge="start"
                                         sx={{ mr: 2, ...(open && { display: 'none' }) }}
                                     >
                                         <MenuSharp style={{ color: TEXT_HEADER }} />
                                     </IconButton>
-                                </div>
-
-                                {/* <div style={{}}>
-                                    <img src={logo} alt="logo" style={{ height: 70 }} />
                                 </div> */}
+
+                                <div style={{}}>
+                                    {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
+                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER }}>
+                                        Bienvenido a mi portafolio
+                                    </Typography>
+                                </div>
                             </div>
 
 

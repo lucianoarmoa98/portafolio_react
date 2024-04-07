@@ -8,6 +8,10 @@ import javaImage from "../assets/iconsPortafolioKills/java.svg";
 import javascriptImage from "../assets/iconsPortafolioKills/javascript-1.svg";
 import gitImage from "../assets/iconsPortafolioKills/git-icon.svg";
 import gitHubImage from "../assets/iconsPortafolioKills/github-icon-1.svg";
+import naturaImage from "../assets/empresas/natura.png";
+import indufarImage from "../assets/empresas/indufar.png";
+import omaImage from "../assets/empresas/oma.jpg";
+import cabalImage from "../assets/empresas/cabal.png";
 
 export const MessageDev= "Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles, con más de 4 años de experiencia.";
 
@@ -56,5 +60,152 @@ export const DatasKills = [
         "name": "GitHub",
         "image": gitHubImage,
         "id": "git_hub"
+    }
+];
+
+export const ExperienciaLaboral = [
+    {
+        "id": "1",
+        "name": "Desarrollador de software",
+        "description": "Desarrollo de aplicaciones web y QA de aplicaciones web.",
+        "date": "2020 - 2021",
+        "company": "Software Natura Paraguay S.A.",
+        "image": naturaImage,
+        "code": "natura",
+        "tecnologies": [
+            {
+                "name": "React JS",
+                "image": reactImage
+            },
+            {
+                "name": "JavaScript",
+                "image": javascriptImage
+            },
+            {
+                "name": "Node.js",
+                "image": nodejsImage
+            },
+            {
+                "name": "Firebase",
+                "image": firebaseImage
+            },
+            {
+                "name": "Git",
+                "image": gitImage
+            },
+            {
+                "name": "GitHub",
+                "image": gitHubImage
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Desarrollador de software",
+        "description": "Desarrollo de aplicaciones web y móviles.",
+        "date": "2021 - 2022",
+        "company": "Indufar CISA",
+        "image": indufarImage,
+        "code": "indufar",
+        "tecnologies": [
+            {
+                "name": "React JS",
+                "image": reactImage
+            },
+            {
+                "name": "Node.js",
+                "image": nodejsImage
+            },
+            {
+                "name": "Java",
+                "image": javaImage
+            },
+            {
+                "name": "MySQL",
+                "image": mysqlImage
+            },
+            {
+                "name": "Spring Boot",
+                "image": springImage
+            },
+            {
+                "name": "Git",
+                "image": gitImage
+            },
+            {
+                "name": "GitHub",
+                "image": gitHubImage
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Desarrollador de software",
+        "description": "Desarrollo de aplicaciones web y móviles.",
+        "date": "2022 - 2023",
+        "company": "Desarrollos de software OMA S.A.",
+        "image": omaImage,
+        "code": "oma",
+        "tecnologies": [
+            {
+                "name": "React JS",
+                "image": reactImage
+            },
+            {
+                "name": "Node.js",
+                "image": nodejsImage
+            },
+            {
+                "name": "MySQL",
+                "image": mysqlImage
+            },
+            {
+                "name": "Git",
+                "image": gitImage
+            },
+            {
+                "name": "GitHub",
+                "image": gitHubImage
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Desarrollador de software",
+        "description": "Desarrollo de aplicaciones web y móviles.",
+        "date": "Actualidad - 2023",
+        "company": "Cabal Paraguay Ltda.",
+        "image": cabalImage,
+        "code": "cabal",
+        "tecnologies": [
+            {
+                "name": "React JS",
+                "image": reactImage
+            },
+            {
+                "name": "Node.js",
+                "image": nodejsImage
+            },
+            {
+                "name": "Java",
+                "image": javaImage
+            },
+            {
+                "name": "MySQL",
+                "image": mysqlImage
+            },
+            {
+                "name": "Spring Boot",
+                "image": springImage
+            },
+            {
+                "name": "Git",
+                "image": gitImage
+            },
+            {
+                "name": "GitHub",
+                "image": gitHubImage
+            }
+        ]
     }
 ];
