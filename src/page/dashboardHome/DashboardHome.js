@@ -4,13 +4,14 @@ import HeaderCustom from "../../components/HeaderCustom";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import SkeletonLoading from "../../components/SkeletonLoading";
 import { BackdropStyle } from "../../styles/styles";
-import { DatasKills, ExperienciaLaboral, MessageDev } from "../../constantes/constantes";
+import { DatasKills, ExperienciaLaboral, MessageDev, servicios } from "../../constantes/constantes";
 import Lottie from 'react-lottie';
 import animationDevelop from "../../assets/lotties/developProgramming.json";
 import '../../styles/AppCss.css'
 import HabilidadesCustom from "../../components/HabilidadesCustom";
 import ExperienciasCustom from "../../components/ExperienciasCustom";
 import SaludoBienvenida from "../../components/SaludoBienvenida";
+import NosotrosComponents from "../../components/NosotrosComponents";
 
 
 
@@ -63,12 +64,17 @@ function DashboardHome() {
 
     return (
         <HeaderCustom>
-            <Container sx={{marginBottom: 10}}>
+            <Container sx={{marginBottom: 10}} style={{
+                //agregar linear gradient
+                // backgroundImage: 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
+            }}>
                 <SaludoBienvenida />
 
-                <ExperienciasCustom data={ExperienciaLaboral} mobile={mobile} />
+                <NosotrosComponents />
 
-                <HabilidadesCustom data={DatasKills} mobile={mobile} />
+                <ExperienciasCustom data={servicios} mobile={mobile} />
+
+                {/* <HabilidadesCustom data={DatasKills} mobile={mobile} /> */}
             </Container>
         </HeaderCustom>
     );

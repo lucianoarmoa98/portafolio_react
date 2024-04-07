@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { Box, Button, CircularProgress, Container, Grid, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { COLOR_BACKGROUND_BLANCO } from "../styles/styles";
-
+import checkImage from "../assets/iconsPortafolioKills/check.png";
+import Lottie from 'react-lottie';
 
 function ExperienciasCustom({ data, mobile }) {
 
@@ -30,8 +30,8 @@ function ExperienciasCustom({ data, mobile }) {
 
     const desktopKillStyle = {
         borderRadius: 10,
-        height: 50,
-        width: 50,
+        height: 30,
+        width: 30,
         objectFit: 'contain',
     };
 
@@ -39,9 +39,9 @@ function ExperienciasCustom({ data, mobile }) {
 
     return (
         <Box>
-            <Box sx={{}} className="animate__animated animate__backInLeft">
+            <Box sx={{ marginTop: 10 }} className="animate__animated animate__backInLeft">
                 <Typography variant={mobile ? "h4" : 'h3'} style={{ textAlign: 'center' }}>
-                    Experiencias laborales
+                    Nuestros Servicios
                 </Typography>
             </Box>
 
@@ -83,50 +83,65 @@ function ExperienciasCustom({ data, mobile }) {
                                             display: 'flex',
                                             justifyContent: 'center',
                                         }}>
-                                            {item.code === 'natura' ?
+                                            {/* {item.code === 'natura' ?
                                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: 130, height: 90, backgroundColor: '#973941', borderRadius: 10 }}>
                                                     <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />
                                                 </div>
                                                 :
                                                 <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />}
+                                        */}
+                                            <Lottie
+                                                options={{
+                                                    loop: true,
+                                                    autoplay: true,
+                                                    animationData: item.imagen,
+                                                    rendererSettings: {
+                                                        preserveAspectRatio: "xMidYMid slice"
+                                                    }
+                                                }}
+                                                height={150}
+                                                width={150}
+                                            />
+
                                         </Box>
 
 
                                         <Box>
-                                            <Typography variant="h6" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.company}
+                                            <Typography variant="h5" style={{ textAlign: 'center', marginTop: 5 }}>
+                                                {item.nombre}
                                             </Typography>
-                                            <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
+                                            {/* <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
                                                 {item.name}
-                                            </Typography>
+                                            </Typography> */}
                                         </Box>
 
 
-                                        <Box>
-                                            <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.description}
-                                            </Typography>
-                                            <Typography variant="caption" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.date}
-                                            </Typography>
-                                        </Box>
+
 
                                         <Box sx={{
-                                            display: 'flex',
-                                            flexWrap: 'wrap',
-                                            justifyContent: 'center',
-                                            alignContent: 'center',
-                                            alignItems: 'center',
+                                            // display: 'flex',
+                                            // flexWrap: 'wrap',
+                                            // justifyContent: 'center',
+                                            // alignContent: 'center',
+                                            // alignItems: 'center',
                                         }}>
                                             {
-                                                item.tecnologies.map((item, index) => {
+                                                item.servicios.map((item, index) => {
                                                     return (
                                                         <Box key={index} sx={{
                                                             padding: 2,
-                                                            transition: 'transform'
+                                                            transition: 'transform',
+                                                            display: 'flex',
+                                                            alignContent: 'center',
+                                                            alignItems: 'center',
                                                         }}>
-                                                            <img src={item.image} alt={item.name} style={mobileKillStyle} draggable="false" />
+                                                            <img src={checkImage} alt={item.name} style={mobileKillStyle} draggable="false" />
+
+                                                            <Typography variant="body1" style={{ textAlign: "left", marginLeft: 10 }}>
+                                                                {item}
+                                                            </Typography>
                                                         </Box>
+
                                                     )
                                                 })
                                             }
@@ -175,49 +190,57 @@ function ExperienciasCustom({ data, mobile }) {
                                             display: 'flex',
                                             justifyContent: 'center',
                                         }}>
-                                            {item.code === 'natura' ?
+                                            {/* {item.code === 'natura' ?
                                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: 130, height: 90, backgroundColor: '#973941', borderRadius: 10 }}>
                                                     <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />
                                                 </div>
                                                 :
-                                                <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />}
+                                                <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />} */}
+                                                 <Lottie
+                                                options={{
+                                                    loop: true,
+                                                    autoplay: true,
+                                                    animationData: item.imagen,
+                                                    rendererSettings: {
+                                                        preserveAspectRatio: "xMidYMid slice"
+                                                    }
+                                                }}
+                                                height={150}
+                                                width={150}
+                                            />
                                         </Box>
 
 
                                         <Box>
                                             <Typography variant="h6" style={{ textAlign: 'center', marginTop: 5 }}>
-                                                {item.company}
+                                                {item.nombre}
                                             </Typography>
-                                            <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.name}
-                                            </Typography>
+
                                         </Box>
 
-
-                                        <Box>
-                                            <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.description}
-                                            </Typography>
-                                            <Typography variant="caption" style={{ textAlign: 'left', marginTop: 5 }}>
-                                                {item.date}
-                                            </Typography>
-                                        </Box>
 
                                         <Box sx={{
-                                            display: 'flex',
-                                            flexWrap: 'wrap',
-                                            justifyContent: 'center',
-                                            alignContent: 'center',
-                                            alignItems: 'center',
+                                            // display: 'flex',
+                                            // flexWrap: 'wrap',
+                                            // justifyContent: 'center',
+                                            // alignContent: 'center',
+                                            // alignItems: 'center',
                                         }}>
                                             {
-                                                item.tecnologies.map((item, index) => {
+                                                item.servicios.map((item, index) => {
                                                     return (
                                                         <Box key={index} sx={{
                                                             padding: 2,
-                                                            transition: 'transform'
+                                                            transition: 'transform',
+                                                            display: 'flex',
+                                                            alignContent: 'center',
+                                                            alignItems: 'center',
                                                         }}>
-                                                            <img src={item.image} alt={item.name} style={desktopKillStyle} draggable="false" />
+                                                            <img src={checkImage} alt={item.name} style={desktopKillStyle} draggable="false" />
+
+                                                            <Typography variant="body1" style={{ textAlign: "left", marginLeft: 10 }}>
+                                                                {item}
+                                                            </Typography>
                                                         </Box>
                                                     )
                                                 })

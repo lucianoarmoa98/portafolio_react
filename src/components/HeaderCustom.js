@@ -174,7 +174,7 @@ function HeaderCustom({ children, id }) {
     return (
         <>
             <Helmet>
-                <title>Portafolio - {handleTitle()}</title>
+                <title>{handleTitle()}</title>
                 <meta name="description" content="Incentiva Groups Py" />
                 <meta name="keywords" content="Incentiva Groups Py" />
                 <meta name="author" content="Incentiva Groups Py" />
@@ -218,7 +218,7 @@ function HeaderCustom({ children, id }) {
                                 <div style={{}}>
                                     {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
                                     <Typography variant="body1" noWrap style={{ color: TEXT_HEADER }}>
-                                        Bienvenido a mi portafolio
+                                        Incentiva Groups
                                     </Typography>
                                 </div>
                             </div>
@@ -237,6 +237,12 @@ function HeaderCustom({ children, id }) {
                             {/* <img src={logo} alt="logo" style={{ width: 120, height: 70 }} /> */}
 
                             <Box sx={{}}>
+                                <div style={{}}>
+                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER }}>
+                                        Incentiva Groups
+                                    </Typography>
+                                </div>
+
                                 {/* <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHome}>Inicio</Button> */}
 
                                 {/* <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHombres}>Hombres</Button>
@@ -335,6 +341,7 @@ function HeaderCustom({ children, id }) {
                     flexDirection: 'column',
                     height: '100%',
                     background: '#f9f9f9',
+                    backgroundImage: 'linear-gradient(120deg, #daf3ff 0%, #fef1f7 100%)',
                 }}>
                     {children}
                 </div>

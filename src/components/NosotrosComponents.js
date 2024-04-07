@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
-import Lottie from 'react-lottie';
 import animationDevelop from "../assets/lotties/developProgramming.json";
-import { MessageDev } from "../constantes/constantes";
+import { MessageDev, Nosotros } from "../constantes/constantes";
 
 
 
 
-function SaludoBienvenida() {
+function NosotrosComponents() {
 
 
     const theme = useTheme();
@@ -54,7 +53,7 @@ function SaludoBienvenida() {
 
 
     return (
-        <Box sx={{}}>
+        <Box sx={{marginTop: 5}}>
             {mobile ?
                 <Box sx={{
                     justifyContent: 'center',
@@ -64,28 +63,14 @@ function SaludoBienvenida() {
 
                     <Box sx={{}}>
                         <Typography variant={mobile ? "h3" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }} className="animate__animated animate__backInLeft">
-                            ¡Bienvenidos a Incentiva Groups!
+                            Acerca de Nosotros
                         </Typography>
 
                         <Typography variant="h5" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
-                            {MessageDev}
+                            {Nosotros.titlePrincipal}
                         </Typography>
                     </Box>
 
-                    <div className="animate__animated animate__backInRight">
-                        <Lottie
-                            options={{
-                                loop: true,
-                                autoplay: true,
-                                animationData: animationDevelop,
-                                rendererSettings: {
-                                    preserveAspectRatio: "xMidYMid slice"
-                                }
-                            }}
-                            height={mobile ? '50%' : '50vh'}
-                            width={mobile ? '90%' : '50vh'}
-                        />
-                    </div>
                 </Box>
                 :
                 <Box sx={{
@@ -96,35 +81,26 @@ function SaludoBienvenida() {
                 }}>
 
                     <Box sx={{
-                        width: '50%',
+                        // width: '50%',
                     }}>
-                        <Typography variant={mobile ? "h3" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }} className="animate__animated animate__backInLeft">
-                            ¡Bienvenidos a Incentiva Groups!
+                        <Typography variant={'h3'} style={{ textAlign: 'center', fontWeight: 500 }} className="animate__animated animate__backInLeft">
+                            Acerca de Nosotros
                         </Typography>
 
-                        <Typography variant="h5" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
-                            {MessageDev}
+                        <Typography variant="h5" style={{ textAlign: "left", fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
+                            {Nosotros.titlePrincipal}
                         </Typography>
+
+                        {/* <Typography variant="h5" style={{ textAlign: "left", fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
+                            {Nosotros.description}
+                        </Typography> */}
                     </Box>
 
-                    <div className="animate__animated animate__backInRight">
-                        <Lottie
-                            options={{
-                                loop: true,
-                                autoplay: true,
-                                animationData: animationDevelop,
-                                rendererSettings: {
-                                    preserveAspectRatio: "xMidYMid slice"
-                                }
-                            }}
-                            height={mobile ? '50%' : '40vh'}
-                            width={mobile ? '90%' : '50vh'}
-                        />
-                    </div>
+
                 </Box>
             }
         </Box>
     );
 }
 
-export default SaludoBienvenida;
+export default NosotrosComponents;

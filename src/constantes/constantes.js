@@ -12,8 +12,58 @@ import naturaImage from "../assets/empresas/natura.png";
 import indufarImage from "../assets/empresas/indufar.png";
 import omaImage from "../assets/empresas/oma.jpg";
 import cabalImage from "../assets/empresas/cabal.png";
+import animationConsultoria from "../assets/lotties/consultoria.json";
+import animationMktdigital from "../assets/lotties/mktdigital.json";
+import animationProgramador from "../assets/lotties/programador.json";
 
-export const MessageDev= "Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles, con más de 4 años de experiencia.";
+export const MessageDev = "Transformando el mundo del Marketing Digital y Desarrollo de Sistemas";
+
+export const Nosotros = {
+    "titlePrincipal": "Fundada en 2023, Incentiva Groups es líder en marketing digital y desarrollo de sistemas. Nuestra misión es impulsar el crecimiento y expansión de las empresas en el mundo digital.",
+    "titleSecundary": "Nuestra misión es ayudar a las empresas a crecer y expandirse en el mundo digital.",
+    "description": "Con un equipo de profesionales altamente capacitados, ofrecemos soluciones innovadoras y creativas para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen marketing digital, desarrollo de aplicaciones web y móviles, diseño gráfico y mucho más. En Incentiva Groups, nos esforzamos por brindar un servicio excepcional y resultados sobresalientes en cada proyecto que emprendemos. ¡Únete a nosotros y descubre el poder del marketing digital!"
+}
+
+export const servicios = [
+    {
+        nombre: "Marketing Digital",
+        imagen: animationMktdigital,
+        colorFondo: "#FFC107", // Amarillo
+        servicios: [
+            "Estrategias de Marketing en Redes Sociales",
+            "Optimización de Motores de Búsqueda (SEO)",
+            "Publicidad en Línea (SEM)",
+            "Marketing de Contenidos"
+        ]
+    },
+    {
+        nombre: "Desarrollo de Sistemas",
+        imagen: animationProgramador,
+        colorFondo: "#2196F3", // Azul
+        servicios: [
+            "Diseño y Desarrollo de Sitios Web",
+            "Aplicaciones Móviles Personalizadas",
+            "Sistemas de Gestión de Contenidos (CMS)",
+            "Desarrollo de E-commerce"
+        ]
+    },
+    {
+        nombre: "Consultoría y Estrategia",
+        imagen: animationConsultoria,
+        colorFondo: "#4CAF50", // Verde
+        servicios: [
+            "Análisis de Mercado y Competencia",
+            "Planificación Estratégica Digital",
+            "Auditorías de Sitios Web y SEO",
+            "Capacitación y Talleres"
+        ]
+    }
+];
+
+
+
+
+
 
 export const DatasKills = [
     {
@@ -66,7 +116,7 @@ export const DatasKills = [
 export const ExperienciaLaboral = [
     {
         "id": "1",
-        "name": "Desarrollador de software",
+        "name": "Marketing Digital",
         "description": "Desarrollo de aplicaciones web y QA de aplicaciones web.",
         "date": "2020 - 2021",
         "company": "Software Natura Paraguay S.A.",
