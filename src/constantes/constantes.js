@@ -22,7 +22,15 @@ export const Nosotros = {
     "titlePrincipal": "Fundada en 2023, Incentiva Groups es líder en marketing digital y desarrollo de sistemas. Nuestra misión es impulsar el crecimiento y expansión de las empresas en el mundo digital.",
     "titleSecundary": "Nuestra misión es ayudar a las empresas a crecer y expandirse en el mundo digital.",
     "description": "Con un equipo de profesionales altamente capacitados, ofrecemos soluciones innovadoras y creativas para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen marketing digital, desarrollo de aplicaciones web y móviles, diseño gráfico y mucho más. En Incentiva Groups, nos esforzamos por brindar un servicio excepcional y resultados sobresalientes en cada proyecto que emprendemos. ¡Únete a nosotros y descubre el poder del marketing digital!"
-}
+};
+
+export const porQueElegirnos = {
+    experienciaYExpertise: "Nuestro equipo está compuesto por profesionales altamente capacitados y con amplia experiencia en sus respectivos campos.",
+    innovacionConstante: "Estamos siempre al tanto de las últimas tendencias y tecnologías emergentes para ofrecer soluciones de vanguardia a nuestros clientes.",
+    compromisoConLaExcelencia: "Nos esforzamos por la excelencia en todo lo que hacemos, desde el diseño hasta la implementación y el seguimiento de resultados."
+};
+
+
 
 export const servicios = [
     {

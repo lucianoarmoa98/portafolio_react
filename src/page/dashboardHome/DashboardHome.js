@@ -12,6 +12,7 @@ import HabilidadesCustom from "../../components/HabilidadesCustom";
 import ExperienciasCustom from "../../components/ExperienciasCustom";
 import SaludoBienvenida from "../../components/SaludoBienvenida";
 import NosotrosComponents from "../../components/NosotrosComponents";
+import MasInfoComponents from "../../components/MasInfoComponents";
 
 
 
@@ -64,16 +65,17 @@ function DashboardHome() {
 
     return (
         <HeaderCustom>
+            <SaludoBienvenida />
             <Container sx={{marginBottom: 10}} style={{
                 //agregar linear gradient
                 // backgroundImage: 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
             }}>
-                <SaludoBienvenida />
 
                 <NosotrosComponents />
 
                 <ExperienciasCustom data={servicios} mobile={mobile} />
 
+                <MasInfoComponents />
                 {/* <HabilidadesCustom data={DatasKills} mobile={mobile} /> */}
             </Container>
         </HeaderCustom>

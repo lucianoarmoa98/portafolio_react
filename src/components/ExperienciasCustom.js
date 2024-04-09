@@ -40,7 +40,7 @@ function ExperienciasCustom({ data, mobile }) {
     return (
         <Box>
             <Box sx={{ marginTop: 10 }} className="animate__animated animate__backInLeft">
-                <Typography variant={mobile ? "h4" : 'h3'} style={{ textAlign: 'center' }}>
+                <Typography variant={mobile ? "h4" : 'h3'} style={{ textAlign: 'center', fontWeight: 'bold' }}>
                     Nuestros Servicios
                 </Typography>
             </Box>
@@ -107,7 +107,7 @@ function ExperienciasCustom({ data, mobile }) {
 
 
                                         <Box>
-                                            <Typography variant="h5" style={{ textAlign: 'center', marginTop: 5 }}>
+                                            <Typography variant="h5" style={{ textAlign: 'center', marginTop: 5, fontWeight: 'bold' }}>
                                                 {item.nombre}
                                             </Typography>
                                             {/* <Typography variant="body1" style={{ textAlign: 'left', marginTop: 5 }}>
@@ -212,7 +212,7 @@ function ExperienciasCustom({ data, mobile }) {
 
 
                                         <Box>
-                                            <Typography variant="h6" style={{ textAlign: 'center', marginTop: 5 }}>
+                                            <Typography variant="h6" style={{ textAlign: 'center', marginTop: 5, fontWeight: 'bold' }}>
                                                 {item.nombre}
                                             </Typography>
 

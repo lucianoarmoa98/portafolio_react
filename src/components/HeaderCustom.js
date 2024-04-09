@@ -192,7 +192,9 @@ function HeaderCustom({ children, id }) {
             </Helmet>
             <CssBaseline />
 
-            <AppBar position="fixed" style={{ backgroundColor: 'white' }}>
+            <AppBar position="fixed" style={{ 
+                backgroundColor: 'white'
+                 }}>
                 <Toolbar>
                     {isMatch ? (
                         <Box sx={{ flexGrow: 1 }}>
@@ -217,7 +219,7 @@ function HeaderCustom({ children, id }) {
 
                                 <div style={{}}>
                                     {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
-                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER }}>
+                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
@@ -238,7 +240,7 @@ function HeaderCustom({ children, id }) {
 
                             <Box sx={{}}>
                                 <div style={{}}>
-                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER }}>
+                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold'}}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
@@ -277,7 +279,7 @@ function HeaderCustom({ children, id }) {
                                     <LinkedIn style={{ color: '#0077b5' }} />
                                 </IconButton> */}
 
-                                <IconButton
+                                {/* <IconButton
                                     size="large"
                                     edge="end"
                                     aria-label="account of current user"
@@ -286,7 +288,7 @@ function HeaderCustom({ children, id }) {
                                     onClick={handleMoodNocturno}
                                 >
                                     {!stateMoodNocturno ? <Brightness4 style={{ color: '#0077b5' }} /> : <DarkMode style={{ color: 'black' }} />}
-                                </IconButton>
+                                </IconButton> */}
                             </div>
                         </div>
                     )}
@@ -341,7 +343,8 @@ function HeaderCustom({ children, id }) {
                     flexDirection: 'column',
                     height: '100%',
                     background: '#f9f9f9',
-                    backgroundImage: 'linear-gradient(120deg, #daf3ff 0%, #fef1f7 100%)',
+                    //agregar fondo de pantalla
+                    // backgroundImage: 'linear-gradient(120deg, #daf3ff 0%, #fef1f7 100%)',
                 }}>
                     {children}
                 </div>

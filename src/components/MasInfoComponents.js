@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import animationDevelop from "../assets/lotties/developProgramming.json";
-import { MessageDev, Nosotros } from "../constantes/constantes";
+import { MessageDev, Nosotros, porQueElegirnos } from "../constantes/constantes";
 
 
 
 
-function NosotrosComponents() {
+function MasInfoComponents() {
 
 
     const theme = useTheme();
@@ -59,7 +59,7 @@ function NosotrosComponents() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'rgba(40, 0, 0, 0.1)',
+                    backgroundColor: '#abe2f5',
                     padding: 3,
                     borderRadius: 5,
                 }}
@@ -67,12 +67,16 @@ function NosotrosComponents() {
                 >
 
                     <Box sx={{}}>
-                        <Typography variant={mobile ? "h3" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }}>
-                            Acerca de Nosotros
+                        <Typography variant={mobile ? "h4" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }}>
+                            ¿Por qué Elegirnos?
                         </Typography>
 
-                        <Typography variant="h5" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }}>
-                            {Nosotros.titlePrincipal}
+                        <Typography variant="h6" style={{ textAlign: "left", marginTop: 5 }}>
+                            <span style={{ fontWeight: 700 }}>Compromiso con la Excelencia:</span> {porQueElegirnos.compromisoConLaExcelencia} {"\n"}
+                        </Typography>
+
+                        <Typography variant="h6" style={{ textAlign: "left", marginTop: 5 }}>
+                            <span style={{ fontWeight: 700 }}>Innovación Constante:</span> {porQueElegirnos.innovacionConstante}
                         </Typography>
                     </Box>
 
@@ -83,9 +87,9 @@ function NosotrosComponents() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
-                    // backgroundColor: 'rgba(40, 0, 0, 0.1)',
-                    backgroundColor: '#f1efef',
-                    padding: 10,
+                    backgroundColor: '#abe2f5',
+                    // background: 'linear-gradient(#76daff, #aee7ff, #76daff)',
+                    padding: 5,
                     borderRadius: 5,
                 }}
                     className="animate__animated animate__backInLeft"
@@ -95,12 +99,18 @@ function NosotrosComponents() {
                         // width: '50%',
                     }}>
                         <Typography variant={'h3'} style={{ textAlign: 'center', fontWeight: 500 }}>
-                            Acerca de Nosotros
+                            ¿Por qué Elegirnos?
                         </Typography>
 
-                        <Typography variant="h5" style={{ textAlign: "left", fontWeight: 100, marginTop: 5 }}>
-                            {Nosotros.titlePrincipal}
+                        <Typography variant="h5" style={{ textAlign: "left", marginTop: 5 }}>
+                            <span style={{ fontWeight: 700 }}>Compromiso con la Excelencia:</span> {porQueElegirnos.compromisoConLaExcelencia} {"\n"}
                         </Typography>
+
+                        <Typography variant="h5" style={{ textAlign: "left", marginTop: 5 }}>
+                            <span style={{ fontWeight: 700 }}>Innovación Constante:</span> {porQueElegirnos.innovacionConstante}
+                        </Typography>
+
+
                     </Box>
                 </Box>
             }
@@ -108,4 +118,4 @@ function NosotrosComponents() {
     );
 }
 
-export default NosotrosComponents;
+export default MasInfoComponents;

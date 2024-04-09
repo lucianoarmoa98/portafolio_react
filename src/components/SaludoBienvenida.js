@@ -60,11 +60,12 @@ function SaludoBienvenida() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
+                    padding: 3,
                 }}>
 
                     <Box sx={{}}>
-                        <Typography variant={mobile ? "h3" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }} className="animate__animated animate__backInLeft">
-                            ¡Bienvenidos a Incentiva Groups!
+                        <Typography variant={mobile ? "h2" : 'h2'} style={{ textAlign: 'center', fontWeight: 'bold'}} className="animate__animated animate__backInLeft">
+                            Bienvenidos a Incentiva Groups
                         </Typography>
 
                         <Typography variant="h5" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
@@ -93,16 +94,22 @@ function SaludoBienvenida() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
+                    // background: 'linear-gradient(#eff9fc, #c9e3ee, #c9e3ee)',
+                    // backgroundColor: '#efefef',
+                    // background: 'linear-gradient(#76daff, #aee7ff, #76daff)',
+                    // borderBottomLeftRadius: 10,
+                    // borderBottomRightRadius: 10,
                 }}>
 
                     <Box sx={{
                         width: '50%',
+                        padding: 5,
                     }}>
-                        <Typography variant={mobile ? "h3" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }} className="animate__animated animate__backInLeft">
+                        <Typography variant={mobile ? "h3" : 'h1'} style={{ textAlign: 'center', fontWeight: 'bold' }} className="animate__animated animate__backInLeft">
                             ¡Bienvenidos a Incentiva Groups!
                         </Typography>
 
-                        <Typography variant="h5" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
+                        <Typography variant="h3" style={{ textAlign: 'center', fontWeight: 100, marginTop: 5 }} className="animate__animated animate__backInRight">
                             {MessageDev}
                         </Typography>
                     </Box>
