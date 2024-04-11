@@ -39,7 +39,7 @@ function ExperienciasCustom({ data, mobile }) {
 
     return (
         <Box>
-            <Box sx={{ marginTop: 10 }} className="animate__animated animate__backInLeft">
+            <Box sx={{  }} className="animate__animated animate__backInLeft">
                 <Typography variant={mobile ? "h4" : 'h3'} style={{ textAlign: 'center', fontWeight: 'bold' }}>
                     Nuestros Servicios
                 </Typography>

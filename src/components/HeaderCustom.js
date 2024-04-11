@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AppBar, Toolbar, IconButton, ListItemText, ListItemIcon, ListItem, List, Divider, Drawer, useTheme, useMediaQuery, Tabs, Tab, Button, Avatar, Box, styled, CssBaseline, Badge, Typography } from '@mui/material';
-import { AccountCircle, Add, Assignment, Brightness4, CardGiftcard, ChevronLeft, ChevronRight, DarkMode, Home, Instagram, LinkedIn, LockOpen, MenuSharp, Person, ShoppingCart, ShoppingCartCheckout, Update, WhatsApp, } from '@mui/icons-material';
+import { AccountCircle, Add, Brightness4, CardGiftcard, ChevronLeft, ChevronRight, DarkMode, Home, Instagram, LinkedIn, LockOpen, MenuSharp, Payment, Person, Phone, ShoppingCart, ShoppingCartCheckout, WhatsApp, } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
 import { COLOR_BACKGROUND_VERDER_AGUA, DrawerHeader, TEXT_HEADER } from '../styles/styles';
 import { useDispatch, useSelector } from 'react-redux';
@@ -66,12 +66,10 @@ function HeaderCustom({ children, id }) {
     const handleTitle = () => {
         if (location === '/') {
             return 'Inicio';
-        } else if (location === '/incentiva-ecommerce-web/hombres' || location === `/incentiva-ecommerce-web/hombres/detalles-hombres/${id}`) {
-            return 'Hombres';
-        } else if (location === '/incentiva-ecommerce-web/mujeres' || location === `/incentiva-ecommerce-web/mujeres/detalles-mujeres/${id}`) {
-            return 'Mujeres';
-        } else if (location === '/incentiva-ecommerce-web/admin' || location === '/incentiva-ecommerce-web/admin') {
-            return 'Cargar Catálogo';
+        } else if (location === '/app/servicios') {
+            return 'Servicios';
+        } else if (location === '/app/contacto') {
+            return 'Contacto';
         } else {
             return 'Inicio';
         }
@@ -90,12 +88,12 @@ function HeaderCustom({ children, id }) {
         history('/');
     }
 
-    const handleHombres = () => {
-        history('/incentiva-ecommerce-web/hombres');
+    const handleServicios = () => {
+        history('/app/servicios');
     }
 
-    const handleMujeres = () => {
-        history('/incentiva-ecommerce-web/mujeres');
+    const handleContacto = () => {
+        history('/app/contacto');
     }
 
     const handleCarrito = () => {
@@ -150,24 +148,16 @@ function HeaderCustom({ children, id }) {
         },
         {
             id: 2,
-            name: 'Hombres',
-            icon: <Person style={{ color: TEXT_HEADER }} />,
-            action: handleHombres
+            name: 'Servicios',
+            icon: <Payment style={{ color: TEXT_HEADER }} />,
+            action: handleServicios
         },
         {
             id: 3,
-            name: 'Mujeres',
-            icon: <CardGiftcard style={{ color: TEXT_HEADER }} />,
-            action: handleMujeres
+            name: 'Contacto',
+            icon: <Phone style={{ color: TEXT_HEADER }} />,
+            action: handleContacto
         },
-        {
-            id: 4,
-            name: 'Carrito',
-            icon: <Badge badgeContent={stateOrderNumber} color="error">
-                <ShoppingCart style={{ color: TEXT_HEADER }} />
-            </Badge>,
-            action: handleCarrito
-        }
     ]
 
 
@@ -192,9 +182,9 @@ function HeaderCustom({ children, id }) {
             </Helmet>
             <CssBaseline />
 
-            <AppBar position="fixed" style={{ 
-                backgroundColor: 'white'
-                 }}>
+            <AppBar position="fixed" style={{
+                backgroundColor: 'white',
+            }}>
                 <Toolbar>
                     {isMatch ? (
                         <Box sx={{ flexGrow: 1 }}>
@@ -205,24 +195,26 @@ function HeaderCustom({ children, id }) {
                                 width: '100%',
 
                             }}>
-                                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <IconButton
-                                        color="inherit"
-                                        aria-label="open drawer"
-                                        // onClick={handleDrawerOpen}
-                                        edge="start"
-                                        sx={{ mr: 2, ...(open && { display: 'none' }) }}
-                                    >
-                                        <MenuSharp style={{ color: TEXT_HEADER }} />
-                                    </IconButton>
-                                </div> */}
-
                                 <div style={{}}>
                                     {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
                                     <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
+
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                    <IconButton
+                                        color="inherit"
+                                        aria-label="open drawer"
+                                        onClick={handleDrawerOpen}
+                                        edge="start"
+                                    // sx={{ mr: 2, ...(open && { display: 'none' }) }}
+                                    >
+                                        <MenuSharp style={{ color: TEXT_HEADER }} />
+                                    </IconButton>
+                                </div>
+
+
                             </div>
 
 
@@ -238,18 +230,35 @@ function HeaderCustom({ children, id }) {
                         }}>
                             {/* <img src={logo} alt="logo" style={{ width: 120, height: 70 }} /> */}
 
-                            <Box sx={{}}>
+                            <Box sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                width: '100%',
+                            }}>
                                 <div style={{}}>
-                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold'}}>
+                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
 
-                                {/* <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHome}>Inicio</Button> */}
 
-                                {/* <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHombres}>Hombres</Button>
+                                <Box sx={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                }}>
+                                    <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHome}>Inicio</Button>
 
-                                <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleMujeres}>Mujeres</Button> */}
+                                    <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleServicios}>
+                                        Servicios
+                                    </Button>
+
+                                    <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleContacto}>
+                                        Contacto
+                                    </Button>
+                                </Box>
+
                             </Box>
 
 
@@ -342,7 +351,7 @@ function HeaderCustom({ children, id }) {
                     display: 'flex',
                     flexDirection: 'column',
                     height: '100%',
-                    background: '#f9f9f9',
+                    background: '#f8f9fa',
                     //agregar fondo de pantalla
                     // backgroundImage: 'linear-gradient(120deg, #daf3ff 0%, #fef1f7 100%)',
                 }}>

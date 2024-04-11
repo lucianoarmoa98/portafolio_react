@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ProtectedRoutes, ProtectedRoutesLogin } from "./Autorizador"
 import ErrorPage from "../page/errorPage/ErrorPage"
 import DashboardHome from "../page/dashboardHome/DashboardHome"
+import SeriviciosPage from "../page/servicios/SeriviciosPage"
+import ContactoPage from "../page/contacto/ContactoPage"
 
 
 function RutesScreen() {
@@ -18,7 +20,9 @@ function RutesScreen() {
         </Route> */}
 
         {/* <Route element={<ProtectedRoutes />}> */}
-        <Route path="/portafolio_react" element={<DashboardHome />} />
+        <Route path="/" element={<DashboardHome />} />
+        <Route path="/app/servicios" element={<SeriviciosPage />} />
+        <Route path="/app/contacto" element={<ContactoPage />} />
         {/* <Route path="/bienvenido" element={<InicioPage />} />
         <Route path="/incentiva-ecommerce-web/hombres" element={<DashboardHombres />} />
         <Route path="/incentiva-ecommerce-web/hombres/:detalles/:id" element={<CardDetails />} />

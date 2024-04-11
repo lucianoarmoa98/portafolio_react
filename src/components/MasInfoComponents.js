@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import animationDevelop from "../assets/lotties/developProgramming.json";
-import { MessageDev, Nosotros, porQueElegirnos } from "../constantes/constantes";
-
-
-
+import { MessageDev, Nosotros, datosAdicionales, porQueElegirnos } from "../constantes/constantes";
+import Lottie from 'react-lottie';
+import animationDevelopPhone from "../assets/lotties/phonedeveloper.json";
+import animationMkt from "../assets/lotties/mkt.json";
 
 function MasInfoComponents() {
 
@@ -55,60 +55,125 @@ function MasInfoComponents() {
     return (
         <Box sx={{ marginTop: 5 }}>
             {mobile ?
-                <Box sx={{
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: '#abe2f5',
-                    padding: 3,
-                    borderRadius: 5,
-                }}
-                    className="animate__animated animate__backInLeft"
-                >
-
-                    <Box sx={{}}>
-                        <Typography variant={mobile ? "h4" : 'h2'} style={{ textAlign: 'center', fontWeight: 500, marginTop: mobile ? 20 : 50 }}>
-                            ¿Por qué Elegirnos?
+                <Box sx={{}} >
+                    <Box sx={{
+                        display: 'flex',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                    }} className="animate__animated animate__backInLeft">
+                        <Typography variant="h6" style={{ textAlign: "center" }}>
+                            {datosAdicionales.titleMobileDeveloper}
                         </Typography>
 
-                        <Typography variant="h6" style={{ textAlign: "left", marginTop: 5 }}>
-                            <span style={{ fontWeight: 700 }}>Compromiso con la Excelencia:</span> {porQueElegirnos.compromisoConLaExcelencia} {"\n"}
-                        </Typography>
+                        <div>
+                            <Lottie
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: animationDevelopPhone,
+                                    rendererSettings: {
+                                        preserveAspectRatio: "xMidYMid slice"
+                                    }
+                                }}
+                                height={200}
+                                width={200}
+                            />
+                        </div>
+                    </Box>
 
-                        <Typography variant="h6" style={{ textAlign: "left", marginTop: 5 }}>
-                            <span style={{ fontWeight: 700 }}>Innovación Constante:</span> {porQueElegirnos.innovacionConstante}
+                    <Box sx={{
+                        display: 'flex',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                    }} className="animate__animated animate__backInRight">
+                        <div>
+                            <Lottie
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: animationMkt,
+                                    rendererSettings: {
+                                        preserveAspectRatio: "xMidYMid slice"
+                                    }
+                                }}
+                                height={200}
+                                width={200}
+                            />
+                        </div>
+
+                        <Typography variant="h6" style={{ textAlign: "center" }}>
+                            {datosAdicionales.titleMarketingDigital}
                         </Typography>
                     </Box>
 
                 </Box>
                 :
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: '#abe2f5',
-                    // background: 'linear-gradient(#76daff, #aee7ff, #76daff)',
-                    padding: 5,
-                    borderRadius: 5,
-                }}
-                    className="animate__animated animate__backInLeft"
-                >
+                <Box sx={{}}  >
+                    <Box sx={{
+                        display: 'flex',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                    }}
+                        className="animate__animated animate__backInLeft"
+                    >
+
+
+
+                        <div>
+                            <Lottie
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: animationDevelopPhone,
+                                    rendererSettings: {
+                                        preserveAspectRatio: "xMidYMid slice"
+                                    }
+                                }}
+                                height={mobile ? '50%' : '40vh'}
+                                width={mobile ? '90%' : '50vh'}
+                            />
+                        </div>
+
+                        <Typography variant="h4" style={{
+                            width: '50%',
+                            textAlign: "center"
+                        }}>
+                            {datosAdicionales.titleMobileDeveloper}
+                        </Typography>
+
+                    </Box>
 
                     <Box sx={{
-                        // width: '50%',
-                    }}>
-                        <Typography variant={'h3'} style={{ textAlign: 'center', fontWeight: 500 }}>
-                            ¿Por qué Elegirnos?
+                        display: 'flex',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                        width: '100%'
+                    }}
+                        className="animate__animated animate__backInRight"
+                    >
+
+                        <Typography variant="h4" style={{
+                            width: '50%',
+                            textAlign: "center"
+                        }}>
+                            {datosAdicionales.titleMarketingDigital}
                         </Typography>
 
-                        <Typography variant="h5" style={{ textAlign: "left", marginTop: 5 }}>
-                            <span style={{ fontWeight: 700 }}>Compromiso con la Excelencia:</span> {porQueElegirnos.compromisoConLaExcelencia} {"\n"}
-                        </Typography>
+                        <div>
+                            <Lottie
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: animationMkt,
+                                    rendererSettings: {
+                                        preserveAspectRatio: "xMidYMid slice"
+                                    }
+                                }}
+                                height={mobile ? '50%' : '40vh'}
+                                width={mobile ? '90%' : '50vh'}
+                            />
+                        </div>
 
-                        <Typography variant="h5" style={{ textAlign: "left", marginTop: 5 }}>
-                            <span style={{ fontWeight: 700 }}>Innovación Constante:</span> {porQueElegirnos.innovacionConstante}
-                        </Typography>
 
 
                     </Box>

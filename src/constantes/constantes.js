@@ -30,6 +30,11 @@ export const porQueElegirnos = {
     compromisoConLaExcelencia: "Nos esforzamos por la excelencia en todo lo que hacemos, desde el diseño hasta la implementación y el seguimiento de resultados."
 };
 
+export const datosAdicionales = {
+    "titleMobileDeveloper": "Transforma tu visión en una experiencia móvil cautivadora en iOS y Android. Simplifica tu alcance y destaca en todas partes con nuestras aplicaciones multiplataforma.",
+    "titleMarketingDigital": "Potencia tu presencia digital con estrategias innovadoras y resultados tangibles. Desde SEO hasta SEM, maximizamos tu impacto en línea y hacemos que tu marca brille en cada plataforma.",
+};
+
 
 
 export const servicios = [

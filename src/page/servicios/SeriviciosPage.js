@@ -17,7 +17,7 @@ import MasInfoComponents from "../../components/MasInfoComponents";
 
 
 
-function DashboardHome() {
+function SeriviciosPage() {
     const [texto, setTexto] = useState('');
     const [cargando, setCargando] = useState(false);
 
@@ -65,24 +65,13 @@ function DashboardHome() {
 
     return (
         <HeaderCustom>
-            <SaludoBienvenida />
-
-            <Container sx={{ marginBottom: 10 }} style={{
-                //agregar linear gradient
-                // backgroundImage: 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
-            }}>
-
-                <NosotrosComponents />
-
+            <Container sx={{}} style={{}}>
                 <div style={{ marginTop: 50 }}>
                     <ExperienciasCustom data={servicios} mobile={mobile} />
                 </div>
-
-                <MasInfoComponents />
-                {/* <HabilidadesCustom data={DatasKills} mobile={mobile} /> */}
             </Container>
         </HeaderCustom>
     );
 }
 
-export default DashboardHome;
+export default SeriviciosPage;
