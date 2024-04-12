@@ -9,7 +9,7 @@ import Lottie from 'react-lottie';
 import animationDevelop from "../../assets/lotties/developProgramming.json";
 import '../../styles/AppCss.css'
 import HabilidadesCustom from "../../components/HabilidadesCustom";
-import ExperienciasCustom from "../../components/ExperienciasCustom";
+import ServicioComponents from "../../components/ServicioComponents";
 import SaludoBienvenida from "../../components/SaludoBienvenida";
 import NosotrosComponents from "../../components/NosotrosComponents";
 import MasInfoComponents from "../../components/MasInfoComponents";
@@ -42,8 +42,6 @@ function DashboardHome() {
 
 
 
-    console.log('mobile', mobile);
-
 
 
 
@@ -75,7 +73,7 @@ function DashboardHome() {
                 <NosotrosComponents />
 
                 <div style={{ marginTop: 50 }}>
-                    <ExperienciasCustom data={servicios} mobile={mobile} />
+                    <ServicioComponents data={servicios} mobile={mobile} />
                 </div>
 
                 <MasInfoComponents />

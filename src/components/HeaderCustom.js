@@ -112,7 +112,7 @@ function HeaderCustom({ children, id }) {
     }
 
     const handlePhoneWhatsApp = () => {
-        let url = 'https://api.whatsapp.com/send?phone=595991905663&text=Hola%20Incentiva%20Py';
+        let url = 'https://api.whatsapp.com/send?phone=595976308922&text=Hola%20Incentiva%20Py';
 
         //abrir en una nueva pestaña
         window.open(url, '_blank');
@@ -197,7 +197,7 @@ function HeaderCustom({ children, id }) {
                             }}>
                                 <div style={{}}>
                                     {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
-                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold' }}>
+                                    <Typography variant="body1" noWrap style={{ color: "black", fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
@@ -237,7 +237,7 @@ function HeaderCustom({ children, id }) {
                                 width: '100%',
                             }}>
                                 <div style={{}}>
-                                    <Typography variant="body1" noWrap style={{ color: TEXT_HEADER, fontWeight: 'bold' }}>
+                                    <Typography variant="body1" noWrap style={{ color: "black", fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
                                 </div>
@@ -357,7 +357,7 @@ function HeaderCustom({ children, id }) {
                 }}>
                     {children}
                 </div>
-                <Footers />
+                <Footers handlePhoneWhatsApp={handlePhoneWhatsApp}/>
             </Main>
         </>
     );

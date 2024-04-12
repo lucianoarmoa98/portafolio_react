@@ -32,9 +32,6 @@ function SaludoBienvenida() {
 
 
 
-    console.log('mobile', mobile);
-
-
 
 
     const mobileStyle = {

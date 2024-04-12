@@ -31,11 +31,6 @@ function MasInfoComponents() {
 
 
 
-    console.log('mobile', mobile);
-
-
-
-
     const mobileStyle = {
         borderRadius: 10,
         height: 100,
@@ -61,7 +56,7 @@ function MasInfoComponents() {
                         alignContent: 'center',
                         alignItems: 'center',
                     }} className="animate__animated animate__backInLeft">
-                        <Typography variant="h6" style={{ textAlign: "center" }}>
+                        <Typography variant="h6" style={{ textAlign: "left" }}>
                             {datosAdicionales.titleMobileDeveloper}
                         </Typography>
 
@@ -101,7 +96,7 @@ function MasInfoComponents() {
                             />
                         </div>
 
-                        <Typography variant="h6" style={{ textAlign: "center" }}>
+                        <Typography variant="h6" style={{ textAlign: "right" }}>
                             {datosAdicionales.titleMarketingDigital}
                         </Typography>
                     </Box>
@@ -113,12 +108,11 @@ function MasInfoComponents() {
                         display: 'flex',
                         alignContent: 'center',
                         alignItems: 'center',
+                        justifyContent: 'space-between',
+                        width: '100%'
                     }}
                         className="animate__animated animate__backInLeft"
                     >
-
-
-
                         <div>
                             <Lottie
                                 options={{
@@ -147,7 +141,8 @@ function MasInfoComponents() {
                         display: 'flex',
                         alignContent: 'center',
                         alignItems: 'center',
-                        width: '100%'
+                        width: '100%',
+                        justifyContent: 'space-between'
                     }}
                         className="animate__animated animate__backInRight"
                     >

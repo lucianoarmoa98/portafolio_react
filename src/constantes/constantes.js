@@ -41,7 +41,7 @@ export const servicios = [
     {
         nombre: "Marketing Digital",
         imagen: animationMktdigital,
-        colorFondo: "#FFC107", // Amarillo
+        code: "marketing_digital",
         servicios: [
             "Estrategias de Marketing en Redes Sociales",
             "Optimización de Motores de Búsqueda (SEO)",
@@ -52,18 +52,18 @@ export const servicios = [
     {
         nombre: "Desarrollo de Sistemas",
         imagen: animationProgramador,
-        colorFondo: "#2196F3", // Azul
+        code: "desarrollo_sistemas",
         servicios: [
             "Diseño y Desarrollo de Sitios Web",
             "Aplicaciones Móviles Personalizadas",
             "Sistemas de Gestión de Contenidos (CMS)",
-            "Desarrollo de E-commerce"
+            // "Desarrollo de E-commerce"
         ]
     },
     {
         nombre: "Consultoría y Estrategia",
         imagen: animationConsultoria,
-        colorFondo: "#4CAF50", // Verde
+        code: "consultoria_estrategia",
         servicios: [
             "Análisis de Mercado y Competencia",
             "Planificación Estratégica Digital",
@@ -72,6 +72,117 @@ export const servicios = [
         ]
     }
 ];
+
+export const planesMarketingDigital = [
+    {
+      nombre: "Plan Básico",
+      descripcion: "Ideal para pequeñas empresas o startups que buscan establecer su presencia en línea.",
+      opciones: [
+        "Diseño de sitio web básico",
+        "Gestión de una red social",
+        "Análisis mensual de métricas básicas"
+      ],
+      costo: "$500/mes"
+    },
+    {
+      nombre: "Plan Medio",
+      descripcion: "Perfecto para empresas en crecimiento que desean ampliar su alcance y atraer más clientes.",
+      opciones: [
+        "Diseño de sitio web personalizado",
+        "Gestión de múltiples redes sociales",
+        "Campañas de publicidad en línea",
+        "Seguimiento y análisis de métricas avanzadas"
+      ],
+      costo: "$1000/mes"
+    },
+    {
+      nombre: "Plan Empresas",
+      descripcion: "Para empresas consolidadas que buscan una estrategia completa de marketing digital. Contacta a nuestro equipo para obtener un presupuesto personalizado.",
+      opciones: [
+        "Diseño de sitio web avanzado con funcionalidades personalizadas",
+        "Gestión completa de presencia en redes sociales",
+        "Publicidad en múltiples plataformas",
+        "Análisis detallado de datos y estrategias de optimización continuas"
+      ],
+      costo: "Contáctanos"
+    }
+  ];
+  
+
+  export const planesDesarrolloSistemas = [
+    {
+      nombre: "Plan Básico",
+      descripcion: "Perfecto para startups o pequeñas empresas que necesitan una presencia en línea básica.",
+      opciones: [
+        "Sitio web estático básico",
+        "Diseño simple y funcionalidades limitadas",
+        "Soporte técnico básico"
+      ],
+      costo: "$800"
+    },
+    {
+      nombre: "Plan Medio",
+      descripcion: "Ideal para empresas en crecimiento que requieren funcionalidades más avanzadas y personalizadas.",
+      opciones: [
+        "Desarrollo de sitio web dinámico",
+        "Funcionalidades personalizadas según requerimientos",
+        "Soporte técnico prioritario",
+        "Integración con sistemas externos",
+        "Capacitación para el uso del sitio web",
+        "Mantenimiento mensual"
+      ],
+      costo: "$1500"
+    },
+    {
+      nombre: "Plan Empresas",
+      descripcion: "Para empresas establecidas que necesitan soluciones personalizadas y escalables. Contáctanos para obtener un presupuesto detallado.",
+      opciones: [
+        "Desarrollo de aplicaciones web y móviles",
+        "Integraciones avanzadas de sistemas",
+        "Soporte técnico premium y mantenimiento continuo",
+        "Capacitación y asesoramiento personalizado",,
+        "Auditorías de seguridad y rendimiento",
+        "Optimización y escalabilidad",
+        "Creación de aplicaciones móviles multiplataforma"
+      ],
+      costo: "Contáctanos"
+    }
+  ];
+
+  
+  export const planesConsultoriaEstrategia = [
+    {
+      nombre: "Plan Básico",
+      descripcion: "Perfecto para startups o pequeñas empresas que necesitan orientación inicial en su estrategia digital.",
+      opciones: [
+        "Análisis de mercado básico",
+        "Estrategia de marketing inicial",
+        "Sesiones de consultoría mensuales"
+      ],
+      costo: "$500/mes"
+    },
+    {
+      nombre: "Plan Medio",
+      descripcion: "Ideal para empresas en crecimiento que requieren un enfoque más completo en su estrategia digital.",
+      opciones: [
+        "Análisis detallado de mercado y competencia",
+        "Desarrollo de estrategia digital personalizada",
+        "Sesiones de consultoría quincenales"
+      ],
+      costo: "$1000/mes"
+    },
+    {
+      nombre: "Plan Empresas",
+      descripcion: "Para empresas establecidas que buscan una consultoría estratégica integral. Contáctanos para un plan personalizado.",
+      opciones: [
+        "Auditorías exhaustivas de marketing y estrategias existentes",
+        "Desarrollo de estrategias a largo plazo y tácticas de implementación",
+        "Sesiones de consultoría personalizadas según las necesidades del cliente"
+      ],
+      costo: "Contáctanos"
+    }
+  ];
+  
 
 
 

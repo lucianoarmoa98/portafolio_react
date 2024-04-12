@@ -31,10 +31,6 @@ function NosotrosComponents() {
 
 
 
-    console.log('mobile', mobile);
-
-
-
 
     const mobileStyle = {
         borderRadius: 10,
@@ -59,7 +55,7 @@ function NosotrosComponents() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'rgba(40, 0, 0, 0.1)',
+                    backgroundColor: '#eaebef',
                     padding: 3,
                     borderRadius: 5,
                 }}
@@ -84,7 +80,7 @@ function NosotrosComponents() {
                     alignContent: 'center',
                     alignItems: 'center',
                     // backgroundColor: 'rgba(40, 0, 0, 0.1)',
-                    backgroundColor: '#f1efef',
+                    backgroundColor: '#eaebef',
                     padding: 10,
                     borderRadius: 5,
                 }}

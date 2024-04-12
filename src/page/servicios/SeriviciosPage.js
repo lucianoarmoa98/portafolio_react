@@ -9,7 +9,7 @@ import Lottie from 'react-lottie';
 import animationDevelop from "../../assets/lotties/developProgramming.json";
 import '../../styles/AppCss.css'
 import HabilidadesCustom from "../../components/HabilidadesCustom";
-import ExperienciasCustom from "../../components/ExperienciasCustom";
+import ServicioComponents from "../../components/ServicioComponents";
 import SaludoBienvenida from "../../components/SaludoBienvenida";
 import NosotrosComponents from "../../components/NosotrosComponents";
 import MasInfoComponents from "../../components/MasInfoComponents";
@@ -42,9 +42,6 @@ function SeriviciosPage() {
 
 
 
-    console.log('mobile', mobile);
-
-
 
 
     const mobileStyle = {
@@ -66,8 +63,8 @@ function SeriviciosPage() {
     return (
         <HeaderCustom>
             <Container sx={{}} style={{}}>
-                <div style={{ marginTop: 50 }}>
-                    <ExperienciasCustom data={servicios} mobile={mobile} />
+                <div style={{ marginTop: 15 }}>
+                    <ServicioComponents data={servicios} mobile={mobile} />
                 </div>
             </Container>
         </HeaderCustom>

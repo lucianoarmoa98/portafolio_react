@@ -4,14 +4,14 @@ import { LinkedIn, WhatsApp } from "@mui/icons-material";
 import { COLOR_BACKGROUND_VERDER_AGUA } from "../styles/styles";
 
 
-const Footers = () => {
+const Footers = ({ handlePhoneWhatsApp }) => {
 
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div>
-            {mobile ? <FootersMobile /> : <FootersWeb />}
+            {mobile ? <FootersMobile /> : <FootersWeb handlePhoneWhatsApp={handlePhoneWhatsApp} />}
         </div>
     );
 }
@@ -34,7 +34,7 @@ const FootersMobile = () => {
     );
 }
 
-const FootersWeb = () => {
+const FootersWeb = ({ handlePhoneWhatsApp }) => {
     return (
         <footer style={{
             position: 'absolute',
@@ -55,7 +55,7 @@ const FootersWeb = () => {
                         edge="end"
                         aria-label="account of current user"
                         color="secondary"
-                    // onClick={handlePhoneWhatsApp}
+                        onClick={() => handlePhoneWhatsApp()}
                     >
                         {/*agregar icono de whatsapp*/}
                         <WhatsApp style={{ color: COLOR_BACKGROUND_VERDER_AGUA }} />

@@ -3,9 +3,13 @@ import { Box, Button, CircularProgress, Container, Grid, LinearProgress, Typogra
 import { COLOR_BACKGROUND_BLANCO } from "../styles/styles";
 import checkImage from "../assets/iconsPortafolioKills/check.png";
 import Lottie from 'react-lottie';
+import { useNavigate } from "react-router-dom";
 
-function ExperienciasCustom({ data, mobile }) {
 
+
+function ServicioComponents({ data, mobile }) {
+
+    let history = useNavigate();
 
     const mobileStyle = {
         borderRadius: 10,
@@ -16,8 +20,8 @@ function ExperienciasCustom({ data, mobile }) {
 
     const mobileKillStyle = {
         borderRadius: 10,
-        height: 50,
-        width: 40,
+        height: 30,
+        width: 30,
         objectFit: 'contain'
     };
 
@@ -30,16 +34,21 @@ function ExperienciasCustom({ data, mobile }) {
 
     const desktopKillStyle = {
         borderRadius: 10,
-        height: 30,
-        width: 30,
+        height: 25,
+        width: 25,
         objectFit: 'contain',
     };
 
 
+    const handelVerMas = (item) => {
+        console.log('item', item);
+        history(`/app/servicios/${item.code}`, { state: item.code });
+    }
+
 
     return (
         <Box>
-            <Box sx={{  }} className="animate__animated animate__backInLeft">
+            <Box sx={{}} className="animate__animated animate__backInLeft">
                 <Typography variant={mobile ? "h4" : 'h3'} style={{ textAlign: 'center', fontWeight: 'bold' }}>
                     Nuestros Servicios
                 </Typography>
@@ -119,21 +128,19 @@ function ExperienciasCustom({ data, mobile }) {
 
 
                                         <Box sx={{
-                                            // display: 'flex',
-                                            // flexWrap: 'wrap',
-                                            // justifyContent: 'center',
-                                            // alignContent: 'center',
-                                            // alignItems: 'center',
+                                            // marginBottom: 5,
+                                            marginTop: 1,
                                         }}>
                                             {
                                                 item.servicios.map((item, index) => {
                                                     return (
                                                         <Box key={index} sx={{
-                                                            padding: 2,
-                                                            transition: 'transform',
+                                                            // padding: 1,
+                                                            // transition: 'transform',
                                                             display: 'flex',
                                                             alignContent: 'center',
                                                             alignItems: 'center',
+                                                            marginBottom: 1
                                                         }}>
                                                             <img src={checkImage} alt={item.name} style={mobileKillStyle} draggable="false" />
 
@@ -145,6 +152,19 @@ function ExperienciasCustom({ data, mobile }) {
                                                     )
                                                 })
                                             }
+                                        </Box>
+
+
+                                        <Box sx={{
+                                            width: '100%',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            marginBottom: 2
+                                        }}>
+                                            <Button variant="contained" style={{ marginTop: 10, background: '#07bc7d' }} onClick={() => handelVerMas(item)}>
+                                                Ver más
+                                            </Button>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -167,7 +187,7 @@ function ExperienciasCustom({ data, mobile }) {
                         data.map((item, index) => {
                             return (
                                 <Box key={index} sx={{
-                                    padding: 2,
+                                    // padding: 2,
                                     transition: 'transform 0.3s', // Añadir transición solo para la propiedad transform
                                     '&:hover': {
                                         transform: 'scale(1.1)' // Aumentar el tamaño en un 10% al pasar el cursor
@@ -179,7 +199,7 @@ function ExperienciasCustom({ data, mobile }) {
                                     boxShadow: '0 0 10px 0 rgba(0,0,0,0.2)',
                                     borderRadius: 5,
                                     width: 350,
-                                    // height: 300,
+                                    height: 550,
                                     marginBottom: 5,
                                 }}>
                                     <Box sx={{
@@ -190,13 +210,7 @@ function ExperienciasCustom({ data, mobile }) {
                                             display: 'flex',
                                             justifyContent: 'center',
                                         }}>
-                                            {/* {item.code === 'natura' ?
-                                                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: 130, height: 90, backgroundColor: '#973941', borderRadius: 10 }}>
-                                                    <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />
-                                                </div>
-                                                :
-                                                <img src={item.image} alt={item.name} style={desktopStyle} draggable="false" />} */}
-                                                 <Lottie
+                                            <Lottie
                                                 options={{
                                                     loop: true,
                                                     autoplay: true,
@@ -220,17 +234,15 @@ function ExperienciasCustom({ data, mobile }) {
 
 
                                         <Box sx={{
-                                            // display: 'flex',
-                                            // flexWrap: 'wrap',
-                                            // justifyContent: 'center',
-                                            // alignContent: 'center',
-                                            // alignItems: 'center',
+                                            // marginBottom: 5,
+                                            padding: 2
                                         }}>
                                             {
                                                 item.servicios.map((item, index) => {
                                                     return (
                                                         <Box key={index} sx={{
-                                                            padding: 2,
+                                                            // padding: 2,
+                                                            marginBottom: 2,
                                                             transition: 'transform',
                                                             display: 'flex',
                                                             alignContent: 'center',
@@ -246,6 +258,20 @@ function ExperienciasCustom({ data, mobile }) {
                                                 })
                                             }
                                         </Box>
+
+                                        <Box sx={{
+                                            width: '100%',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            marginBottom: 2,
+                                            position: 'absolute',
+                                            bottom: 0
+                                        }}>
+                                            <Button variant="contained" style={{ marginTop: 10, background: '#07bc7d' }} onClick={() => handelVerMas(item)}>
+                                                Ver más
+                                            </Button>
+                                        </Box>
                                     </Box>
                                 </Box>
                             )
@@ -258,4 +284,4 @@ function ExperienciasCustom({ data, mobile }) {
     )
 }
 
-export default ExperienciasCustom;
+export default ServicioComponents;

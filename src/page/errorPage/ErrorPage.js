@@ -32,6 +32,7 @@ function ErrorPage() {
                     variant="contained"
                     color="primary"
                     href="/"
+                    style={{ backgroundColor: '#07bc7d' }}
                 >
                     Ir al inicio
                 </Button>

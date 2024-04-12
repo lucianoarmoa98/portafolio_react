@@ -4,6 +4,7 @@ import ErrorPage from "../page/errorPage/ErrorPage"
 import DashboardHome from "../page/dashboardHome/DashboardHome"
 import SeriviciosPage from "../page/servicios/SeriviciosPage"
 import ContactoPage from "../page/contacto/ContactoPage"
+import ServicioDetailsPage from "../page/servicios/ServicioDetailsPage"
 
 
 function RutesScreen() {
@@ -22,6 +23,7 @@ function RutesScreen() {
         {/* <Route element={<ProtectedRoutes />}> */}
         <Route path="/" element={<DashboardHome />} />
         <Route path="/app/servicios" element={<SeriviciosPage />} />
+        <Route path="/app/servicios/:id" element={<ServicioDetailsPage />} />
         <Route path="/app/contacto" element={<ContactoPage />} />
         {/* <Route path="/bienvenido" element={<InicioPage />} />
         <Route path="/incentiva-ecommerce-web/hombres" element={<DashboardHombres />} />
