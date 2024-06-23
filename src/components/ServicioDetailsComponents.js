@@ -40,8 +40,7 @@ function ServicioDetailsComponents({ data, mobile, titleInfo }) {
         <Box>
             {data.length === 0 && (
                 <Box style={{
-
-                    marginTop: 5,
+                    // marginTop: 5,
                     height: '100vh',
                 }}>
                     <Typography variant="h4" style={{ textAlign: 'center', fontWeight: 'bold' }}>
@@ -92,7 +91,7 @@ function ServicioDetailsComponents({ data, mobile, titleInfo }) {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
-                    marginTop: 3,
+                    marginTop: 5,
                 }}
                     className="animate__animated animate__backInRight"
                 >

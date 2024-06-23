@@ -178,7 +178,7 @@ function ServicioComponents({ data, mobile }) {
                     display: 'flex',
                     flexWrap: 'wrap',
                     justifyContent: 'space-around',
-                    marginTop: 3,
+                    marginTop: 5,
                 }}
                     className="animate__animated animate__backInRight"
                 >

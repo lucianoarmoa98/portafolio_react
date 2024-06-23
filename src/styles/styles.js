@@ -8,7 +8,8 @@ export const COLOR_BACKGROUND_VERDE_CLARO = "#e2f7ed";
 export const COLOR_BACKGROUND_AZUL_CLARO = "#4962c7";
 export const COLOR_BACKGROUND_GRIS = "#ebeef1";
 export const COLOR_BACKGROUND_GRIS_OSCURO = "#c1c1c1";
-export const TEXT_HEADER = "#4a4a4a";//#262626
+export const TEXT_HEADER = "#008001";//#262626
+export const ICON_COLOR_BLACK = "#0d1217";
 
 let altoPantalla = window.innerHeight;
 

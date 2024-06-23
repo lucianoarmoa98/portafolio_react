@@ -63,7 +63,10 @@ function SeriviciosPage() {
     return (
         <HeaderCustom>
             <Container sx={{}} style={{}}>
-                <div style={{ marginTop: 15 }}>
+                <div style={{
+                    // marginTop: 15,
+                    height: mobile ? 'auto' : '100vh',
+                }}>
                     <ServicioComponents data={servicios} mobile={mobile} />
                 </div>
             </Container>

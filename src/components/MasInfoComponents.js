@@ -128,7 +128,7 @@ function MasInfoComponents() {
                             />
                         </div>
 
-                        <Typography variant="h4" style={{
+                        <Typography variant="h5" style={{
                             width: '50%',
                             textAlign: "center"
                         }}>
@@ -147,7 +147,7 @@ function MasInfoComponents() {
                         className="animate__animated animate__backInRight"
                     >
 
-                        <Typography variant="h4" style={{
+                        <Typography variant="h5" style={{
                             width: '50%',
                             textAlign: "center"
                         }}>

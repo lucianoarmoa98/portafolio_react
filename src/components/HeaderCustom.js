@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { AppBar, Toolbar, IconButton, ListItemText, ListItemIcon, ListItem, List, Divider, Drawer, useTheme, useMediaQuery, Tabs, Tab, Button, Avatar, Box, styled, CssBaseline, Badge, Typography } from '@mui/material';
-import { AccountCircle, Add, Brightness4, CardGiftcard, ChevronLeft, ChevronRight, DarkMode, Home, Instagram, LinkedIn, LockOpen, MenuSharp, Payment, Person, Phone, ShoppingCart, ShoppingCartCheckout, WhatsApp, } from '@mui/icons-material';
+import { AccountCircle, Add, Brightness4, CardGiftcard, ChevronLeft, ChevronRight, DarkMode, Home, HomeOutlined, Instagram, LinkedIn, LockOpen, MenuSharp, Payment, Person, Phone, ShoppingCart, ShoppingCartCheckout, WhatsApp, } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
-import { COLOR_BACKGROUND_VERDER_AGUA, DrawerHeader, TEXT_HEADER } from '../styles/styles';
+import { COLOR_BACKGROUND_VERDER_AGUA, COLOR_BACKGROUND_VERDE_CLARO, DrawerHeader, ICON_COLOR_BLACK, TEXT_HEADER } from '../styles/styles';
 import { useDispatch, useSelector } from 'react-redux';
-// import logo from '../assets/logo.png';
+import logo from '../assets/empresas/logoVerde.png';
 import Footers from './Footers';
 import { setNumberOrders, setTabPosition, setToken } from '../redux/actions/action';
 import { Helmet } from 'react-helmet';
@@ -143,26 +143,30 @@ function HeaderCustom({ children, id }) {
         {
             id: 1,
             name: 'Inicio',
-            icon: <Home style={{ color: TEXT_HEADER }} />,
+            icon: <HomeOutlined style={{ color: ICON_COLOR_BLACK }} />,
             action: handleHome
         },
         {
             id: 2,
             name: 'Servicios',
-            icon: <Payment style={{ color: TEXT_HEADER }} />,
+            icon: <Payment style={{ color: ICON_COLOR_BLACK }} />,
             action: handleServicios
         },
         {
             id: 3,
             name: 'Contacto',
-            icon: <Phone style={{ color: TEXT_HEADER }} />,
+            icon: <Phone style={{ color: ICON_COLOR_BLACK }} />,
             action: handleContacto
         },
     ]
 
+    //funcion para identificar si esta dentro de un dispositivo movil
+    const isMobile = () => {
+        return isMatch;
+    }
 
     return (
-        <>
+        <div style={{ backgroundColor: '#f8f9fa' }}>
             <Helmet>
                 <title>{handleTitle()}</title>
                 <meta name="description" content="Incentiva Groups Py" />
@@ -182,35 +186,48 @@ function HeaderCustom({ children, id }) {
             </Helmet>
             <CssBaseline />
 
-            <AppBar position="fixed" style={{
+            {/* <AppBar position="fixed" style={{
                 backgroundColor: 'white',
+            }}> */}
+            <div style={{
+                // backgroundColor: '#f8f9fa',
             }}>
-                <Toolbar>
+                <Toolbar style={{
+                    backgroundColor: '#f8f9fa',
+                    // backgroundColor: 'blue',
+                    // height: 150,
+                    height: isMatch ? 100 : 150,
+                    justifyContent: 'center',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                }}>
                     {isMatch ? (
                         <Box sx={{ flexGrow: 1 }}>
                             <div style={{
                                 display: 'flex',
                                 justifyContent: 'space-between',
-                                alignItems: 'center',
-                                width: '100%',
-
                             }}>
                                 <div style={{}}>
-                                    {/* <img src={logo} alt="logo" style={{ height: 70 }} /> */}
-                                    <Typography variant="body1" noWrap style={{ color: "black", fontWeight: 'bold' }}>
+                                    <img src={logo} alt="logo" style={{
+                                        // width: 250,
+                                        height: 200,
+                                    }} />
+                                    {/* <Typography variant="body1" noWrap style={{ color: "black", fontWeight: 'bold' }}>
                                         Incentiva Groups
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
 
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div style={{
+                                    display: 'flex',
+                                    marginTop: -50
+                                }}>
                                     <IconButton
                                         color="inherit"
                                         aria-label="open drawer"
                                         onClick={handleDrawerOpen}
                                         edge="start"
-                                    // sx={{ mr: 2, ...(open && { display: 'none' }) }}
                                     >
-                                        <MenuSharp style={{ color: TEXT_HEADER }} />
+                                        <MenuSharp style={{ color: ICON_COLOR_BLACK }} />
                                     </IconButton>
                                 </div>
 
@@ -228,7 +245,6 @@ function HeaderCustom({ children, id }) {
                             alignItems: 'center',
                             width: '100%',
                         }}>
-                            {/* <img src={logo} alt="logo" style={{ width: 120, height: 70 }} /> */}
 
                             <Box sx={{
                                 display: 'flex',
@@ -236,11 +252,19 @@ function HeaderCustom({ children, id }) {
                                 alignItems: 'center',
                                 width: '100%',
                             }}>
-                                <div style={{}}>
+                                <img
+                                    src={logo}
+                                    alt="logo"
+                                    style={{
+                                        width: 300,
+                                        // height: 70,
+                                    }}
+                                />
+                                {/* <div style={{}}>
                                     <Typography variant="body1" noWrap style={{ color: "black", fontWeight: 'bold' }}>
                                         Incentiva Groups
                                     </Typography>
-                                </div>
+                                </div> */}
 
 
                                 <Box sx={{
@@ -248,9 +272,9 @@ function HeaderCustom({ children, id }) {
                                     justifyContent: 'space-between',
                                     alignItems: 'center',
                                 }}>
-                                    <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleHome}>Inicio</Button>
+                                    <Button color="success" style={{ color: TEXT_HEADER }} onClick={handleHome}>Inicio</Button>
 
-                                    <Button color="inherit" style={{ color: TEXT_HEADER }} onClick={handleServicios}>
+                                    <Button color="success" style={{ color: TEXT_HEADER }} onClick={handleServicios}>
                                         Servicios
                                     </Button>
 
@@ -260,49 +284,10 @@ function HeaderCustom({ children, id }) {
                                 </Box>
 
                             </Box>
-
-
-
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-
-                                {/* <IconButton
-                                    size="large"
-                                    edge="end"
-                                    aria-label="account of current user"
-                                    aria-haspopup="true"
-                                    color="inherit"
-                                    onClick={handlePhoneWhatsApp}
-                                >
-                                    <WhatsApp style={{ color: COLOR_BACKGROUND_VERDER_AGUA }} />
-                                </IconButton> */}
-
-
-                                {/* <IconButton
-                                    size="large"
-                                    edge="end"
-                                    aria-label="account of current user"
-                                    aria-haspopup="true"
-                                    color="inherit"
-                                    onClick={handleUrlInstagram}
-                                >
-                                    <LinkedIn style={{ color: '#0077b5' }} />
-                                </IconButton> */}
-
-                                {/* <IconButton
-                                    size="large"
-                                    edge="end"
-                                    aria-label="account of current user"
-                                    aria-haspopup="true"
-                                    color="inherit"
-                                    onClick={handleMoodNocturno}
-                                >
-                                    {!stateMoodNocturno ? <Brightness4 style={{ color: '#0077b5' }} /> : <DarkMode style={{ color: 'black' }} />}
-                                </IconButton> */}
-                            </div>
                         </div>
                     )}
                 </Toolbar>
-            </AppBar>
+            </div>
 
             <Drawer
                 sx={{
@@ -311,6 +296,7 @@ function HeaderCustom({ children, id }) {
                     '& .MuiDrawer-paper': {
                         width: drawerWidth,
                         boxSizing: 'border-box',
+                        backgroundColor: COLOR_BACKGROUND_VERDE_CLARO
                     },
                 }}
                 variant="persistent"
@@ -321,18 +307,22 @@ function HeaderCustom({ children, id }) {
                 <DrawerHeader style={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'center',
+                    // alignItems: 'center',
                 }}>
+
                     <IconButton onClick={handleDrawerClose} style={{ color: TEXT_HEADER }} >
-                        {theme.direction === 'ltr' ? <ChevronLeft /> : <ChevronRight />}
+                        {theme.direction === 'ltr' ? <ChevronLeft style={{ color: ICON_COLOR_BLACK }} /> : <ChevronRight sstyle={{ color: ICON_COLOR_BLACK }} />}
                     </IconButton>
-                    {/* <img src={logo} alt="logo" style={{ width: 120, height: 70 }} /> */}
+                    
+                    <img src={logo} alt="logo" style={{ height: 120 }} />
+
+                    <div />
                 </DrawerHeader>
-                <Divider />
                 <Divider />
 
                 {arrayMenu.map((item, index) => (
-                    <List key={item.id}>
+                    <List key={item.id} style={{}}>
+
                         <ListItem onClick={item.action} >
                             <ListItemIcon>
                                 {item.icon}
@@ -346,7 +336,7 @@ function HeaderCustom({ children, id }) {
             </Drawer>
 
             <Main open={open} onClick={handleDrawerClose}>
-                <DrawerHeader />
+                {/* <DrawerHeader /> */}
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -357,9 +347,9 @@ function HeaderCustom({ children, id }) {
                 }}>
                     {children}
                 </div>
-                <Footers handlePhoneWhatsApp={handlePhoneWhatsApp}/>
+                <Footers handlePhoneWhatsApp={handlePhoneWhatsApp} />
             </Main>
-        </>
+        </div>
     );
 }
 

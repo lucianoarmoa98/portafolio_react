@@ -57,7 +57,7 @@ function SaludoBienvenida() {
                     justifyContent: 'center',
                     alignContent: 'center',
                     alignItems: 'center',
-                    padding: 3,
+                    // padding: 3,
                 }}>
 
                     <Box sx={{}}>
