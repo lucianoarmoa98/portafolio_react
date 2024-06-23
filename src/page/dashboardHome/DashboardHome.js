@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import HeaderCustom from "../../components/HeaderCustom";
 import { Box, Button, CircularProgress, Container, LinearProgress, Typography, useMediaQuery, useTheme } from "@mui/material";
 import SkeletonLoading from "../../components/SkeletonLoading";
-import { BackdropStyle } from "../../styles/styles";
+import { BackdropStyle, TEXT_HEADER } from "../../styles/styles";
 import { DatasKills, ExperienciaLaboral, MessageDev, servicios } from "../../constantes/constantes";
 import Lottie from 'react-lottie';
 import animationDevelop from "../../assets/lotties/developProgramming.json";
@@ -63,6 +63,11 @@ function DashboardHome() {
 
     return (
         <HeaderCustom>
+            <div style={{
+                backgroundColor: TEXT_HEADER,
+                width: '100%',
+                height: 5,
+            }}/>
             <SaludoBienvenida />
 
             <Container sx={{ marginBottom: 10 }} style={{
